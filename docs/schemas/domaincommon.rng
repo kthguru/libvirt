@@ -2558,13 +2558,13 @@
         <attribute name='uuid'>
           <ref name="UUID"/>
         </attribute>
-        <attribute name="usage">
-          <ref name="genericName"/>
+        <attribute name='usage'>
+          <ref name='usageName'/>
         </attribute>
       </choice>
     </element>
   </define>
-
+  
   <!--
        Optional hypervisor extensions in their own namespace:
          QEmu
@@ -2673,6 +2673,11 @@
   <define name="addrIPorName">
     <data type="string">
       <param name="pattern">(([0-2]?[0-9]?[0-9]\.){3}[0-2]?[0-9]?[0-9])|(([0-9a-fA-F]+|:)+[0-9a-fA-F]+)|([a-zA-Z0-9_\.\+\-]*)</param>
+    </data>
+  </define>
+  <define name="usageName">
+    <data type="string">
+      <param name="pattern">[a-zA-Z0-9_\.\+\-]+</param>
     </data>
   </define>
   <define name="usbId">
